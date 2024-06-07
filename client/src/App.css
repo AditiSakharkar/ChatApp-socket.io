@@ -1,0 +1,252 @@
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #f4f4f4;
+  color: #000000;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fff;
+  color: #212121;
+}
+
+/* Join chat container styles */
+.joinChatContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: black;
+  color: #f4f5f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.joinChatContainer h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f4f5f0;
+}
+
+.joinChatContainer input {
+  width: 250px;
+  height: 40px;
+  margin: 7px 0;
+  border: 2px solid #cdec4c;
+  color: black;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.joinChatContainer button {
+  width: 260px;
+  height: 45px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  background: #cdec4c;
+  color: black;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.joinChatContainer button:hover {
+  background: #cdec4c;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Chat window styles */
+.chat-window {
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #cdec4c;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #000000;
+}
+
+.chat-header {
+  height: 50px;
+  background: black;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #cdec4c;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  background: #000000;
+  overflow-y: auto;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.message-container::-webkit-scrollbar-thumb {
+  background: #cdec4c !important;
+  border-radius: 5px;
+}
+
+.message-container::-webkit-scrollbar-track {
+  background: #000 !important;
+  border-radius: 5px;
+}
+
+.message {
+  display: flex;
+  margin: 10px 5px;
+  max-width: 100%;
+}
+
+.message-content {
+  padding: 10px 15px;
+  border-radius: 20px;
+  color: black;
+  word-wrap: break-word;
+  font-size: 14px;
+  position: relative;
+  display: inline-block;
+  max-width: 80%;
+}
+
+/* Messages from the user */
+
+#other {
+  justify-content: flex-start;
+}
+
+#other .message-meta {
+  justify-content: flex-start;
+  margin-left: 5px;
+}
+
+#other .message-content {
+  background-color: #cdec4c;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
+  justify-content: flex-start;
+}
+
+#other .message-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid #cdec4c;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+#you {
+  justify-content: flex-end;
+}
+
+#you .message-content {
+  background-color: #f4f5f0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 20px;
+  justify-content: flex-end;
+}
+
+#you .message-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-right: 10px solid #f4f5f0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+#you .message-meta {
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+.message-meta {
+  display: flex;
+  margin-top: 5px;
+  font-size: 12px;
+  justify-content: space-between;
+  color: #757575;
+}
+
+#author {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.chat-footer {
+  height: 50px;
+  display: flex;
+  border-top: 1px solid #cdec4c;
+  background: #000000 !important;
+}
+
+.chat-footer.no-bg {
+  background: transparent !important;
+}
+
+.chat-footer input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 0;
+  outline: none;
+}
+
+.chat-footer button {
+  width: 50px;
+  border: none;
+  background: #cdec4c;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chat-footer button:hover {
+  background: #a2c41c;
+}
+
+@media (max-width: 600px) {
+  .joinChatContainer input,
+  .joinChatContainer button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .chat-window {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
