@@ -26,11 +26,6 @@ Developed a real-time chat application using `socket.io` that supports up to 2 c
 
 # Images
 
-![Image 1](./path/to/image1.png)
-![Image 2](./path/to/image2.png)
-![Image 3](./path/to/image3.png)
-![Image 4](./path/to/image4.png)
+![Image 1](Screenshot(3).png)
+![Image 2](Screenshot(2).png)
 
----
-
-Replace `<repo-url>` with the URL of your GitHub repository and `./path/to/imageX.png` with the paths to your images.
