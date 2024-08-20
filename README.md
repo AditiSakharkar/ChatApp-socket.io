@@ -26,6 +26,7 @@ Developed a real-time chat application using `socket.io` that supports up to 2 c
 
 # Images
 
-![Image 1](Screenshot(3).png)
-![Image 2](Screenshot(2).png)
+![Image 1](Screenshot (3).png)
+![Image 2](Screenshot (2).png)
+![Image 3](Screenshot (1).png)
 
